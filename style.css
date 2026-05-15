@@ -1,0 +1,146 @@
+/* 1. FONT VE DEĞİŞKENLER */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-color: #020617;       
+    --main-color: #00e5ff;     
+    --text-color: #ffffff;
+    --neon-glow: 0 0 15px rgba(0, 229, 255, 0.4);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%; 
+    background: rgba(2, 6, 23, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.navbar a {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-left: 3rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    text-shadow: var(--neon-glow);
+}
+
+
+#home {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;      
+    padding: 0 15%;          
+}
+
+#home h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    margin-top: 5rem; 
+}
+
+#home p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-bottom: 3rem;
+}
+
+
+.socials {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.socials a {
+    font-size: 2rem;
+    color: var(--main-color);
+    transition: 0.4s;
+}
+
+.socials a:hover {
+    transform: scale(1.2);
+    text-shadow: var(--neon-glow);
+}
+
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; 
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.1rem 3rem;
+    background: transparent; 
+    border: 2px solid var(--main-color); 
+    border-radius: 4rem; 
+    color: var(--main-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.4s ease; 
+    cursor: pointer;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+
+.btn:hover {
+    background: var(--main-color); 
+    color: var(--bg-color); 
+    box-shadow: var(--neon-glow); 
+    transform: translateY(-3px); 
+}
+
+
+.btn.active, .btn:nth-child(1), .btn:nth-child(2) {
+    background: transparent;
+    color: var(--main-color);
+}
+
+
+.btn.active:hover, .btn:nth-child(1):hover, .btn:nth-child(2):hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
