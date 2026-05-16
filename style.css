@@ -57,6 +57,12 @@ body {
     text-shadow: var(--neon-glow);
 }
 
+.heading{
+    font-size:8rem;
+    text-align:center;
+    margin: 5rem 0;
+}
+
 
 #home {
     min-height: 100vh;
@@ -143,4 +149,302 @@ body {
 .btn.active:hover, .btn:nth-child(1):hover, .btn:nth-child(2):hover {
     background: var(--main-color);
     color: var(--bg-color);
+}
+
+
+
+.about {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 9% 5rem;
+    background-color: var(--bg-color); 
+}
+
+.heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; 
+    gap: 4rem;
+    max-width: 1150px;
+    width: 100%;
+    align-items: start;
+}
+
+
+.about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.about-left p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+
+.about-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.about-badges .badge {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+
+.about-right-card {
+    background: rgba(0, 12, 29, 0.6); 
+    border: 1px solid rgba(0, 229, 255, 0.15); 
+    border-radius: 16px;
+    padding: 2.5rem; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    text-align: left;
+    transition: var(--transition);
+}
+
+
+.about-right-card:hover {
+    border-color: var(--main-color);
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.25);
+}
+
+.card-section {
+    margin-bottom: 2rem;
+}
+
+.card-section:last-child {
+    margin-bottom: 0; 
+}
+
+.card-section h3 {
+    font-size: 1.3rem;
+    color: var(--text-color); 
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+}
+
+.card-detail {
+    font-size: 1.05rem;
+    color: #94a3b8; 
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-detail i {
+    color: var(--main-color);
+    font-size: 1.2rem;
+}
+
+@media (max-width: 900px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+
+.card-detail i {
+    color: var(--main-color);
+    font-size: 1.2rem;
+    min-width: 20px; 
+}
+
+.card-section h3 {
+    border-bottom: 1px solid rgba(0, 229, 255, 0.1); 
+    padding-bottom: 0.5rem;
+}
+
+.projects{
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:8rem 9% 5rem;
+    background-color: var(--bg-color);
+}
+
+.projects-container{
+    display:flex;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width:1150px;
+    width:150%;
+    justify-content: center;
+}
+
+.projects-card{
+    background:rgba(0,12,29,0.6);
+    border:1px solid rgba(0,229,255,0.15);
+    border-radius:12px;
+    padding:10rem;
+    text-align:left;
+    transition: all 0.4s ease;
+}
+.projects-card h3{
+    font-size:1.3rem;
+    color:var(--text-color);
+    margin-bottom:1rem;
+    display:flex;
+    align-items:center;
+}
+.projects-card h3 i{
+    color:#ffca28;
+    margin-right:10px;
+}
+
+.projects-card p{
+    font-size:1rem;
+    color:rgb(139, 127, 150);
+    line-height:1.6;
+    margin-bottom:2rem;
+}
+
+.projects-card:hover{
+    border-color:var(--main-color);
+    box-shadow:0 0 20px rgba(0, 229, 255, 0.25);
+    transform:translateY(-5px);
+    transform:translateX(-5px);
+}
+
+.project-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:1rem;
+    color:rgb(170, 121, 219);
+    font-weight:500;
+    transition:0.3s ease;
+}
+
+.projects-link:hover{
+    color:var(--main-color);
+    text-shadow: var(--neon-glow);
+}
+/* ŞABLON 1: TERMINAL FOOTER CSS */
+.footer-terminal {
+    width: 100%;
+    padding: 2rem 9%; /* Kenarlardan navbar ile aynı hizada boşluk bırak */
+    background: #010a15; /* Ana arka plandan bir tık daha koyu lacivert */
+    display: flex; /* Yazıyı sola, ikonları sağa fırlatmak için esnek mod */
+    justify-content: space-between; /* İki uca yasla */
+    align-items: center; /* Dikeyde tam ortala */
+    border-top: 1px solid rgba(0, 229, 255, 0.1); /* Üst tarafa çok ince neon bir çizgi çek */
+}
+
+.footer-text p {
+    font-family: 'Fira Code', monospace; /* Terminal/Kod fontu kullan */
+    font-size: 0.95rem;
+    color: #94a3b8; /* Göz yormayan soluk gri */
+}
+
+/* Terminal imlecinin yanıp sönme efekti (Bonus Mühendislik Dokunuşu) */
+.footer-terminal .blink {
+    color: var(--main-color);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.footer-socials {
+    display: flex;
+    gap: 2rem; /* İkonların arasını aç */
+}
+
+.footer-socials a i {
+    font-size: 1.3rem;
+    color: #94a3b8; /* İlk başta ikonlar sönük dursun */
+    transition: 0.3s ease;
+}
+
+/* İkonların üzerine gelince (Hover) */
+.footer-socials a:hover i {
+    color: var(--main-color); /* Bizim neon maviye dönsün */
+    text-shadow: var(--neon-glow); /* Parlama efekti ver */
+}
+.contact{
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:8rem 9% 5rem;
+    background-color:var(--bg-color);
+}
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:2.5rem;
+    max-width:1150px;
+    width:100%;
+    justify-content:center;
+}
+.contact-card{
+    background:rgba(0, 12, 29, 0.6);
+    border:1px solid rgba(0, 229, 255, 0.15);
+    border-radius:12px;
+    padding:2.5rem;
+    text-align: left;
+    transition:all 0.4s ease;
+}
+.contact-card h3{
+    font-size:1.3rem;
+    color:var(--text-color);
+    margin-bottom:1.5rem;
+}
+.contact-card p{
+    font-size:1rem;
+    color:#cbd5e1;
+    line-height:1.8;
+    margin-bottom:1.2rem;
+}
+.contact-links{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:1.5rem;
+}
+.contact-link{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-size:1rem;
+    color:#94a3b8;
+    font-weight:500;
+    transition:0.3s ease;
+}
+.contact-link:hover {
+    color: var(--main-color); 
+    text-shadow: var(--neon-glow); 
+    padding-left: 5px; 
 }
