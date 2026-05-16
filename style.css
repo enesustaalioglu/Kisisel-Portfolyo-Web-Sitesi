@@ -347,24 +347,24 @@ body {
     color:var(--main-color);
     text-shadow: var(--neon-glow);
 }
-/* ŞABLON 1: TERMINAL FOOTER CSS */
+
 .footer-terminal {
     width: 100%;
-    padding: 2rem 9%; /* Kenarlardan navbar ile aynı hizada boşluk bırak */
-    background: #010a15; /* Ana arka plandan bir tık daha koyu lacivert */
-    display: flex; /* Yazıyı sola, ikonları sağa fırlatmak için esnek mod */
-    justify-content: space-between; /* İki uca yasla */
-    align-items: center; /* Dikeyde tam ortala */
-    border-top: 1px solid rgba(0, 229, 255, 0.1); /* Üst tarafa çok ince neon bir çizgi çek */
+    padding: 2rem 9%; 
+    background: #010a15; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-top: 1px solid rgba(0, 229, 255, 0.1); 
 }
 
 .footer-text p {
-    font-family: 'Fira Code', monospace; /* Terminal/Kod fontu kullan */
+    font-family: 'Fira Code', monospace;
     font-size: 0.95rem;
-    color: #94a3b8; /* Göz yormayan soluk gri */
+    color: #94a3b8; 
 }
 
-/* Terminal imlecinin yanıp sönme efekti (Bonus Mühendislik Dokunuşu) */
+
 .footer-terminal .blink {
     color: var(--main-color);
     animation: pulse 1s infinite;
@@ -375,22 +375,8 @@ body {
     50% { opacity: 1; }
 }
 
-.footer-socials {
-    display: flex;
-    gap: 2rem; /* İkonların arasını aç */
-}
 
-.footer-socials a i {
-    font-size: 1.3rem;
-    color: #94a3b8; /* İlk başta ikonlar sönük dursun */
-    transition: 0.3s ease;
-}
 
-/* İkonların üzerine gelince (Hover) */
-.footer-socials a:hover i {
-    color: var(--main-color); /* Bizim neon maviye dönsün */
-    text-shadow: var(--neon-glow); /* Parlama efekti ver */
-}
 .contact{
     min-height:100vh;
     width:100%;
@@ -447,4 +433,50 @@ body {
     color: var(--main-color); 
     text-shadow: var(--neon-glow); 
     padding-left: 5px; 
+}
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 5% !important;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    header .navbar {
+        display: flex;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header .navbar a {
+        font-size: 0.9rem !important;
+    }
+
+    .home-content h1 {
+        font-size: 2.2rem !important;
+        line-height: 1.3 !important;
+    }
+
+    .project-container,
+    .contact-container {
+        grid-template-columns: 1fr !important;
+        padding: 0 1rem;
+    }
+
+    .contact-card {
+        padding: 1.8rem !important;
+    }
+
+    .contact-card p {
+        word-break: break-all;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .project-card a, 
+    .project-link {
+        color: var(--main-color) !important;
+    }
 }
