@@ -1,5 +1,5 @@
 /* 1. FONT VE DEĞİŞKENLER */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600;700&display=swap');
 
 :root {
     --bg-color: #020617;       
@@ -7,7 +7,6 @@
     --text-color: #ffffff;
     --neon-glow: 0 0 15px rgba(0, 229, 255, 0.4);
 }
-
 
 * {
     margin: 0;
@@ -23,8 +22,11 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
+    width: 100%;
+    overflow-x: hidden;
 }
 
+/* 2. HEADER & NAVBAR */
 .header {
     position: fixed; 
     top: 0;
@@ -57,13 +59,14 @@ body {
     text-shadow: var(--neon-glow);
 }
 
-.heading{
-    font-size:8rem;
-    text-align:center;
-    margin: 5rem 0;
+.heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    text-align: center;
 }
 
-
+/* 3. ANA SAYFA (HOME) */
 #home {
     min-height: 100vh;
     width: 100%;
@@ -90,7 +93,6 @@ body {
     margin-bottom: 3rem;
 }
 
-
 .socials {
     display: flex;
     gap: 1.5rem;
@@ -107,7 +109,6 @@ body {
     transform: scale(1.2);
     text-shadow: var(--neon-glow);
 }
-
 
 .btn-group {
     display: flex;
@@ -131,7 +132,6 @@ body {
     box-shadow: none;
 }
 
-
 .btn:hover {
     background: var(--main-color); 
     color: var(--bg-color); 
@@ -139,20 +139,7 @@ body {
     transform: translateY(-3px); 
 }
 
-
-.btn.active, .btn:nth-child(1), .btn:nth-child(2) {
-    background: transparent;
-    color: var(--main-color);
-}
-
-
-.btn.active:hover, .btn:nth-child(1):hover, .btn:nth-child(2):hover {
-    background: var(--main-color);
-    color: var(--bg-color);
-}
-
-
-
+/* 4. HAKKIMDA (ABOUT) */
 .about {
     min-height: 100vh;
     width: 100%;
@@ -164,14 +151,6 @@ body {
     background-color: var(--bg-color); 
 }
 
-.heading {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 4rem;
-    text-align: center;
-}
-
-
 .about-container {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr; 
@@ -180,7 +159,6 @@ body {
     width: 100%;
     align-items: start;
 }
-
 
 .about-left {
     display: flex;
@@ -194,7 +172,6 @@ body {
     color: #cbd5e1;
     line-height: 1.8;
 }
-
 
 .about-badges {
     display: flex;
@@ -213,7 +190,6 @@ body {
     font-weight: 500;
 }
 
-
 .about-right-card {
     background: rgba(0, 12, 29, 0.6); 
     border: 1px solid rgba(0, 229, 255, 0.15); 
@@ -222,9 +198,8 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
     text-align: left;
-    transition: var(--transition);
+    transition: 0.4s;
 }
-
 
 .about-right-card:hover {
     border-color: var(--main-color);
@@ -233,10 +208,13 @@ body {
 
 .card-section {
     margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.1); 
+    padding-bottom: 0.5rem;
 }
 
 .card-section:last-child {
     margin-bottom: 0; 
+    border-bottom: none;
 }
 
 .card-section h3 {
@@ -258,107 +236,187 @@ body {
 .card-detail i {
     color: var(--main-color);
     font-size: 1.2rem;
-}
-
-
-
-
-.card-detail i {
-    color: var(--main-color);
-    font-size: 1.2rem;
     min-width: 20px; 
 }
 
-.card-section h3 {
-    border-bottom: 1px solid rgba(0, 229, 255, 0.1); 
-    padding-bottom: 0.5rem;
-}
-
-.projects{
-    min-height:100vh;
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    padding:8rem 9% 5rem;
+/* 5. PROJELER (PROJECTS) */
+.projects {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 9% 5rem;
     background-color: var(--bg-color);
 }
 
-.projects-container{
-    display:flex;
+.projects-container {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
-    max-width:1150px;
-    width:150%;
+    max-width: 1150px;
+    width: 100%;
     justify-content: center;
 }
 
-.projects-card{
-    background:rgba(0,12,29,0.6);
-    border:1px solid rgba(0,229,255,0.15);
-    border-radius:12px;
-    padding:10rem;
-    text-align:left;
+.projects-card {
+    background: rgba(0, 12, 29, 0.6);
+    border: 1px solid rgba(0, 229, 255, 0.15);
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-align: left;
     transition: all 0.4s ease;
 }
-.projects-card h3{
-    font-size:1.3rem;
-    color:var(--text-color);
-    margin-bottom:1rem;
-    display:flex;
-    align-items:center;
-}
-.projects-card h3 i{
-    color:#ffca28;
-    margin-right:10px;
+
+.projects-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
 }
 
-.projects-card p{
-    font-size:1rem;
-    color:rgb(139, 127, 150);
-    line-height:1.6;
-    margin-bottom:2rem;
+.projects-card h3 i {
+    color: #ffca28;
+    margin-right: 10px;
 }
 
-.projects-card:hover{
-    border-color:var(--main-color);
-    box-shadow:0 0 20px rgba(0, 229, 255, 0.25);
-    transform:translateY(-5px);
-    transform:translateX(-5px);
+.projects-card p {
+    font-size: 1rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 2rem;
 }
 
-.project-link{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    font-size:1rem;
-    color:rgb(170, 121, 219);
-    font-weight:500;
-    transition:0.3s ease;
+.projects-card:hover {
+    border-color: var(--main-color);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.25);
+    transform: translateY(-5px);
 }
 
-.projects-link:hover{
-    color:var(--main-color);
+.projects-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    color: var(--main-color);
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.projects-link:hover {
     text-shadow: var(--neon-glow);
 }
 
+/* 6. İLETİŞİM (CONTACT) */
+.contact {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 9% 5rem;
+    background-color: var(--bg-color);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1150px;
+    width: 100%;
+    justify-content: center;
+}
+
+.contact-card {
+    background: rgba(0, 12, 29, 0.6);
+    border: 1px solid rgba(0, 229, 255, 0.15);
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-align: left;
+    transition: all 0.4s ease;
+}
+
+.contact-card:hover {
+    border-color: var(--main-color);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.25);
+    transform: translateY(-5px);
+}
+
+.contact-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact-card p {
+    font-size: 1rem;
+    color: #cbd5e1;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-card p i {
+    color: var(--main-color);
+    font-size: 1.2rem;
+}
+
+.contact-email-link {
+    color: #cbd5e1;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-email-link:hover {
+    color: var(--main-color);
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 1.5rem;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: #94a3b8;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--main-color); 
+    text-shadow: var(--neon-glow); 
+    padding-left: 5px; 
+}
+
+/* 7. FOOTER */
 .footer-terminal {
     width: 100%;
     padding: 2rem 9%; 
     background: #010a15; 
     display: flex; 
-    justify-content: space-between; 
+    justify-content: center; 
     align-items: center; 
     border-top: 1px solid rgba(0, 229, 255, 0.1); 
 }
 
 .footer-text p {
-    font-family: 'Fira Code', monospace;
+    font-family: monospace;
     font-size: 0.95rem;
     color: #94a3b8; 
 }
-
 
 .footer-terminal .blink {
     color: var(--main-color);
@@ -370,115 +428,107 @@ body {
     50% { opacity: 1; }
 }
 
-
-
-.contact{
-    min-height:100vh;
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    padding:8rem 9% 5rem;
-    background-color:var(--bg-color);
-}
-.contact-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:2.5rem;
-    max-width:1150px;
-    width:100%;
-    justify-content:center;
-}
-.contact-card{
-    background:rgba(0, 12, 29, 0.6);
-    border:1px solid rgba(0, 229, 255, 0.15);
-    border-radius:12px;
-    padding:2.5rem;
-    text-align: left;
-    transition:all 0.4s ease;
-}
-.contact-card h3{
-    font-size:1.3rem;
-    color:var(--text-color);
-    margin-bottom:1.5rem;
-}
-.contact-card p{
-    font-size:1rem;
-    color:#cbd5e1;
-    line-height:1.8;
-    margin-bottom:1.2rem;
-}
-.contact-links{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    margin-top:1.5rem;
-}
-.contact-link{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    font-size:1rem;
-    color:#94a3b8;
-    font-weight:500;
-    transition:0.3s ease;
-}
-.contact-link:hover {
-    color: var(--main-color); 
-    text-shadow: var(--neon-glow); 
-    padding-left: 5px; 
-}
+/* ==========================================================================
+   8. EKSİKSİZ VE KESİN MOBİL REPSONSIVE AYARLARI (MAKSİMUM 768PX GENİŞLİK)
+   ========================================================================== */
 @media screen and (max-width: 768px) {
     html, body {
-        width: 100% !important;
         overflow-x: hidden !important;
     }
 
-    header {
+    .header {
         padding: 1.5rem 5% !important;
         flex-direction: column !important;
         gap: 1rem !important;
+        position: relative !important;
     }
 
-    header .navbar {
+    .navbar {
         display: flex !important;
-        gap: 1.2rem !important;
+        gap: 1rem !important;
+        justify-content: center !important;
         flex-wrap: wrap !important;
+    }
+
+    .navbar a {
+        margin-left: 0 !important;
+        font-size: 0.95rem !important;
+    }
+
+    .heading {
+        font-size: 2.2rem !important;
+        margin-bottom: 2.5rem !important;
+    }
+
+    #home {
+        padding: 4rem 5% !important;
+        min-height: auto !important;
+    }
+
+    #home h1 {
+        font-size: 2.2rem !important;
+        margin-top: 2rem !important;
+    }
+
+    #home p {
+        font-size: 1rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .socials {
+        margin-bottom: 2.5rem !important;
+    }
+
+    .btn-group {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 1rem !important;
+    }
+
+    .btn {
+        width: 100% !important;
+        padding: 1rem 2rem !important;
+    }
+
+    .about {
+        padding: 4rem 5% !important;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+
+    .about-left {
+        text-align: center !important;
+    }
+
+    .about-badges {
         justify-content: center !important;
     }
 
-    header .navbar a {
-        font-size: 0.9rem !important;
+    .about-right-card {
+        padding: 1.5rem !important;
     }
 
-    .home-content h1 {
-        font-size: 2.2rem !important;
-        line-height: 1.3 !important;
+    .projects {
+        padding: 4rem 5% !important;
     }
 
-    .project-container,
+    .projects-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .contact {
+        padding: 4rem 5% !important;
+    }
+
     .contact-container {
         grid-template-columns: 1fr !important;
-        padding: 0 1rem !important;
-        width: 100% !important;
-    }
-
-    .contact-card {
-        padding: 1.8rem !important;
-        width: 100% !important;
     }
 
     .contact-card p {
-        word-break: break-all !important;
-        display: flex !important;
-        flex-direction: column !important;
         align-items: flex-start !important;
-        gap: 5px !important;
-    }
-
-    .project-card a, 
-    .project-link {
-        color: var(--main-color) !important;
+        word-break: break-all !important;
     }
 }
